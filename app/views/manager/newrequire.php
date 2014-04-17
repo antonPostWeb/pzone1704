@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="/css/chosen.css" type="text/css" />
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar-inner">
+<div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</a>
+<a class="brand" href="<?php echo URL::to('manager')?>">Главная</a>
+<div class="nav-collapse collapse">
+<ul class="nav">
+<li ><a href="<?php echo URL::to('manager').'/messages' ?>">Обратная связь</a></li>
+<li><a href="<?php echo URL::to('client').'/newrequire' ?>">Новая заявка</a></li>
+<!--<li><a href="#contact">Contact</a></li>-->
+
+</ul>
+</li>
+</ul>
+
+</div> 
+</div>
+</div>
+</div>
+<div id="newrequire" >
+<h2 id="newrequire">Новая заявка</h2>
+<form method = "POST" action = "<?php echo URL::to('client/newrequire')?> ">
+<input placeholder="Введите название" type = "text" name = "title" />
+<br>
+<textarea placeholder = 'Введите описание' rows="10"  name = "body" > </textarea>
+
+</div>
+
+
+</body>

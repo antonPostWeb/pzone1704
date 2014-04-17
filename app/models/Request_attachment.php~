@@ -1,0 +1,5 @@
+<?php
+
+class Request_attachment extends \Eloquent {
+    protected $fillable = [];
+}

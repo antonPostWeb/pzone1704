@@ -1,0 +1,5 @@
+<?php
+
+class RoleUser extends \Eloquent {
+    protected $fillable = [];
+}

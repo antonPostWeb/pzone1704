@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
+
+
+</head>
+
+    <div id = "auth">
+    <form name = "auth" method = "POST" action = "<?php echo URL::to('auth').'/onlylogin' ?>">
+    <h2> Введите ваш логин </h2>
+    <input type = "text" placeholder = "Login" name = "username"/>
+	
+    </form>

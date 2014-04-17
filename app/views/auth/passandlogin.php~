@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
+
+
+</head>
+
+    <div id = "auth">
+    <form name = "auth" method = "POST" action = "<?php echo URL::to('auth').'/passandlogin' ?>">
+    <h2> Введите ваш пароль </h2>
+    <input type="text" name = "password" placeholder = "password" />
+    <?php
+	if (isset($username))
+	{
+		echo '<input type="hidden" name = "username" value = '. $username .' />';
+		
+		
+		
+	} else {
+	echo 'Hello World'; // Ошибку 404 пропишем
+	
+	}
+    ?>
+    </form>
+
+
+
+

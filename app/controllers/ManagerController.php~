@@ -1,0 +1,139 @@
+<?php
+
+class ManagerController extends \BaseController {
+
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return Response
+	 */
+	public $restful = true;
+	
+	public function get_index()
+	{
+		return View::make('layouts/managerindex');
+	}
+
+	 public function get_req($req_id)
+	{
+	
+	
+		return View::make('manager/req')
+				->with('req_id',$req_id);
+				
+	}
+	
+	public function post_newmessage()
+	{
+	$req_id=Input::get('requests');
+	return View::make('manager/newmessage')
+		      ->with('req_id',$req_id);
+	} 
+	
+	 public function post_createmessage()
+	{
+	$req_id = Input::get('requests');
+	$client_id = Req::find($req_id)->client_id;
+	$managerid= Auth::user()->id;
+	$message = new Message;
+	$message->text = Input::get('textnewmessage');
+	$message->req_id = $req_id;
+	$message->role_id = 4;
+	$message->client_id = $client_id;
+	$message->manager_id = $managerid;
+	$message->save();
+	
+	$role_id = User::find($managerid)->role_id;
+	
+	
+		if (Input::hasFile('file'))
+			{
+			$path = app('path');
+			$destinationPath = $path. '/uploads/';
+			$filename = $name = Input::file('file')->getClientOriginalName();
+			Input::file('file')->move($destinationPath, $fileName);
+		
+	$req_attach = new Request_attachment;
+	$req_attach->req_id = $req_id;	
+	$req_attach->upload_token = 12312;	
+	$req_attach->filename = $filename;
+	$req_attach->role_id = $role_id;
+	$req_attach->save();
+	}
+	return Redirect::to('manager/messages');
+		      
+	} 
+	
+	
+	 public function get_messages()
+	{
+	
+
+		return View::make('manager/messages');
+	} 
+	
+	/**
+	 * Show the form for creating a new resource.
+	 *
+	 * @return Response
+	 */
+	public function create()
+	{
+		//
+	}
+
+	/**
+	 * Store a newly created resource in storage.
+	 *
+	 * @return Response
+	 */
+	public function store()
+	{
+		//
+	}
+
+	/**
+	 * Display the specified resource.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function show($id)
+	{
+		//
+	}
+
+	/**
+	 * Show the form for editing the specified resource.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function edit($id)
+	{
+		//
+	}
+
+	/**
+	 * Update the specified resource in storage.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function update($id)
+	{
+		//
+	}
+
+	/**
+	 * Remove the specified resource from storage.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function destroy($id)
+	{
+		//
+	}
+
+}

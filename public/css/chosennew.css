@@ -1,0 +1,424 @@
+body {
+    margin:0px;
+    font-family: tahoma, arial, verdana, sans-serif, Lucida Sans;
+}
+
+textarea{
+    
+    padding:0px;
+    
+}
+
+div#page_header {
+    background: #4E729A;
+    width:100%;
+    height:40px;
+} 
+
+table#formenu{
+    margin-left:20%;
+    border-spacing:30px 0px;
+    float:left;
+}
+
+
+table#formenu td{
+    margin-left:10px;
+    height:40px;
+    min-width:70px;
+    text-align: center;
+    vertical-align:middle;
+    
+    
+    
+}
+
+
+table#formenu td:hover {
+    background: #40638a; /* Цвет фона при наведении */
+    //* color: #fff; /* Цвет текста при наведении */
+   }
+
+
+table#formenu td a{
+    font-weight: bold; 
+    font-size: 12px; 
+    color: #E8EFF7;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #4e7097;
+}
+
+div#time {
+    position:relative;
+    margin-top:0%;
+}
+
+div#emergencyexit{
+    position:relative;
+    min-width:100px;
+    height:40px;
+    margin-top:0%;
+    background:red;
+    float:right;
+    margin-right:1%;
+}
+
+div#emergencyexit a {
+    font-weight: bold; 
+    font-size: 12px; 
+    color: #E8EFF7;
+    text-decoration: none;
+}
+
+div#datepicker{
+    
+    width:20%;
+    margin-left:5%;
+    
+}
+
+span[class="ui-icon ui-icon-circle-triangle-e"],span[class="ui-icon ui-icon-circle-triangle-w"]{
+    
+margin:0px 10px auto 10px;
+    
+}
+
+span[class="ui-icon ui-icon-circle-triangle-e"]{
+    float:right;
+    
+}
+
+div.ui-datepicker-title{
+    
+    text-align: center;
+    vertical-align:middle;
+    
+}
+
+table.ui-datepicker-calendar{
+    
+    border-spacing:15px 5px;
+    
+}
+table.ui-datepicker-calendar tr td a {
+    
+    text-decoration:none;
+    
+}
+
+table.ui-datepicker-calendar tr td p{
+    
+    height:10px;
+    !important;
+    
+    
+}
+
+div.forstyle{
+    
+    background:#F7F7F7;
+    
+}
+
+#wrap2 {
+  border: solid #F3F3F3;
+  border-width: 0px 1px 1px;
+  border-color: rgba(100, 100, 100, 0.08);
+}
+
+div#author_name h3.fio{
+    
+    position:relative;
+font-size: 11px;
+margin-top:0px;
+font-weight: bold;
+color:#2B587A;
+}
+
+div#author_name h3.date{
+       position:relative;
+font-size: 10px;
+margin-top:0px;
+font-weight: bold;
+color:#999999;
+    
+}
+
+
+tr[superattr="chat"]{
+    position:relative;
+    width:100%;
+    height:auto;
+    min-height:70px;
+    margin-left:10%;
+border: 1px solid #d0dae1;
+margin-top:10%;
+}
+
+tr[superattr="chat"] td.firstTD{
+
+    position:relative;
+    width:30%;
+    min-height:70px;
+    padding:7px;
+     vertical-align:middle;
+    
+    
+}
+
+div#divforphoto{
+    position:relative;
+    margin-left:0px;
+    margin-top:0px;
+    width:60px;
+    height:60px;
+    float:left;
+    
+}
+
+
+div#author{
+    
+    position:relative;
+    min-width:120px;
+    height:60px;
+    position:relative;
+    margin-top:0px;
+    margin-left:0px;
+    float:left;
+}
+
+
+div #messagescontent{
+    position:relative;
+    margin-top:0px;
+    margin-left:0px;
+    min-height:70px;
+   
+   
+    text-align: center;
+    vertical-align:middle;
+    
+    
+}
+
+div#divforphoto div.photoImage{
+    
+    position:relative;
+    margin-top:0px;
+    margin-left:0px;
+    width:60;
+    height:60;
+    background-color:white;
+    float:left;
+   
+}
+
+div#divforphoto div.photoImage img#avatar{
+    
+    position:relative;
+    margin-top:0px;
+    margin-left:0px;
+    width:60px;
+    height:60px;
+}
+
+div#author_name{
+    
+    
+    position:relative;
+    margin-top:0px;
+    margin-left:60px;
+    min-width:100px;
+    min-height:60px;
+    text-align: center;
+   
+    
+}
+
+
+
+tr[superattr="chat"] td.secondTD{
+   
+    position:relative;
+    background:white;
+    width:67.5%;
+    height:auto;
+    min-height:70px;
+    padding:7px;
+    text-align: center;
+    vertical-align:middle;
+    
+}
+
+div#divfortext{
+    position:relative;
+    word-wrap:break-word;
+    width:50%;
+    min-height:65px;
+    height:100%;
+    
+}
+
+tr[superattr="chat"] td.secondTD a.lastmessage{
+    top:0px;
+    font-weight: bold;
+    font-size: 11px;
+    color: #67829E;
+    text-decoration: none;
+    
+}
+
+
+
+
+table#maintable {
+    
+    border-spacing:0px;
+    width:100%;
+    border-color: gray;
+     border-collapse: collapse;
+}
+
+table {
+    display: inline-block;
+       border-spacing:0px;
+       !important;
+}
+
+p.message{
+    position:relative;
+    height:100%;
+    font-size: 11px;
+    
+}
+
+a.file {
+    font-size: 12px;
+    
+}
+
+div.label a{
+    
+    color:#2B587A;
+    text-decoration:none;
+    font-size:11px;
+    margin-left:170px;
+    
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
+    
+    
+    color:red;
+    
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+	
+	
+        font-size:11px;
+        
+}
+
+table.ui-datepicker-calendar {
+    border-spacing: 15px 5px;
+}
+
+.ui-widget{
+    font-size:12px;
+    
+}
+
+
+div.note{
+   padding:10px;
+   background:#F7F7F7;
+   margin-top:20px;
+   min-height:70px;  
+   margin-bottom:10px;
+    
+}
+
+div.deletenote{
+    position:relative;
+    float:right;
+    margin-bottom:0%;
+    
+}
+a.deletenote{
+    position:relative;
+    color:red;
+    text-decoration:none;
+    font-size:11px;
+    
+}
+
+
+div#auth {
+    
+    background: #F5F7F8;
+
+    
+}
+
+p.mainlogin{
+    margin:0 auto;
+color: #45688E;
+font-weight: bold;
+padding: 1px 0px 8px;
+    
+    
+}
+
+h3.date{
+    position:relative;
+font-size: 10px;
+margin:0px;
+font-weight: bold;
+color:#999999;
+    
+}
+
+a.lastmessage{
+    margin-top:-3px;
+        font-weight: bold;
+    font-size: 11px;
+    color: #67829E;
+    text-decoration: none;
+    
+}
+
+
+td.filefirstTD{
+    background:white;
+    width:30%;
+    
+    padding:7px;
+     vertical-align:middle;
+    text-align:center;
+    
+}
+
+td.filesecondTD{
+    background:white;
+    width:30%;
+    
+    padding:7px;
+     vertical-align:middle;
+    text-align:center;
+    
+}
+
+table#filetable {
+    margin:0 auto;
+    border-spacing: 15px 10px;
+}
+
+p.notification{
+    
+    color:red;
+    
+}

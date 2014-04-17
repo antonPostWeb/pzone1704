@@ -1,0 +1,142 @@
+<?php
+
+class AuthController extends \BaseController {
+
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return Response
+	 */
+	public function get_index()
+	{
+		return View::make('auth/onlylogin');
+	}
+	
+	public function get_logout()
+	{
+		Auth::logout();
+		
+		return View::make('auth/onlylogin');
+	}
+	
+	public function post_onlylogin()
+	{
+	
+	$username = Input::get('username');
+	
+	$results = User::where('username','=', $username) -> first();
+		
+		
+		if (isset($results)) {
+			return View::make('auth/passandlogin')->with('username',$username);
+		} else {
+		return View::make('auth/onlylogin');
+		
+		}
+	
+	
+		
+		
+	}
+	
+	public function post_passandlogin()
+	{
+	
+		$userdata = array(
+			'username' => Input::get('username'),
+			'password' => Input::get('password'),
+			//'remember' => (bool) Input::get('remember')
+		) ;
+	/*	
+		$user = new User();
+		$user->username     = Input::get('username');
+		$user->password = Hash::make(Input::get('password'));
+		$user->save();
+	*/	//Регистрация
+	
+	
+		 if(Auth::attempt($userdata))
+		{
+		$role = Auth::user()->role_id;
+		
+		if($role == 4){ //client
+		return Redirect::to('client');
+		} elseif($role == 2 or $role ==3) {
+		return Redirect::to('manager');
+		}
+		
+		} else {
+		return View::make('auth/onlylogin');
+		
+		}
+		
+		
+		
+	}
+	
+
+	/**
+	 * Show the form for creating a new resource.
+	 *
+	 * @return Response
+	 */
+	public function create()
+	{
+		//
+	}
+
+	/**
+	 * Store a newly created resource in storage.
+	 *
+	 * @return Response
+	 */
+	public function store()
+	{
+		//
+	}
+
+	/**
+	 * Display the specified resource.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function show($id)
+	{
+		//
+	}
+
+	/**
+	 * Show the form for editing the specified resource.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function edit($id)
+	{
+		//
+	}
+
+	/**
+	 * Update the specified resource in storage.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function update($id)
+	{
+		//
+	}
+
+	/**
+	 * Remove the specified resource from storage.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function destroy($id)
+	{
+		//
+	}
+
+}
